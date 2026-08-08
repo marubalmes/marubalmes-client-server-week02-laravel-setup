@@ -370,7 +370,7 @@ git init
 git add .
 git commit -m "Initial Laravel project setup"
 git branch -M main
-git remote add origin <https://github.com/marubalmes/marubalmes-client-server-week02-laravel-setup.githttps://github.com/marubalmes/marubalmes-client-server-week02-laravel-setup.git>
+git remote add origin https://github.com/marubalmes/marubalmes-client-server-week02-laravel-setup.githttps://github.com/marubalmes/marubalmes-client-server-week02-laravel-setup.git
 git push -u origin main
 ```
 

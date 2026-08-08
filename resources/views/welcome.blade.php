@@ -4,121 +4,158 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Hello Laravel</title>
+    <title>Hello Laravel | ITST 302</title>
 
     <style>
         * {
             box-sizing: border-box;
+            margin: 0;
+            padding: 0;
         }
 
         body {
-            margin: 0;
             font-family: Arial, sans-serif;
-            background: #f3f4f6;
+            background: #f4f6f8;
             color: #333;
+            min-height: 100vh;
         }
 
         .navbar {
-            background: #222;
-            padding: 18px 8%;
+            background: #1f2937;
             color: white;
+            padding: 18px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
 
         .navbar h2 {
-            margin: 0;
             font-size: 20px;
-            font-weight: normal;
+        }
+
+        .navbar span {
+            font-size: 14px;
+            color: #d1d5db;
         }
 
         .container {
-            max-width: 850px;
-            margin: 60px auto;
-            padding: 0 20px;
+            width: 85%;
+            max-width: 900px;
+            margin: 50px auto;
         }
 
-        .card {
+        .welcome {
             background: white;
+            padding: 40px;
             border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            border: 1px solid #e5e7eb;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
         }
 
-        .header {
-            padding: 35px 40px;
-            border-bottom: 1px solid #eee;
+        .welcome h1 {
+            font-size: 32px;
+            color: #1f2937;
+            margin-bottom: 10px;
         }
 
-        .tag {
-            display: inline-block;
-            background: #fce8e6;
-            color: #d92d20;
-            padding: 6px 12px;
-            border-radius: 20px;
-            font-size: 13px;
+        .welcome .subtitle {
+            color: #6b7280;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+
+        .student-section {
+            display: flex;
+            gap: 30px;
+            align-items: stretch;
+        }
+
+        .about {
+            flex: 1;
+            background: #f9fafb;
+            padding: 25px;
+            border-radius: 10px;
+            border: 1px solid #e5e7eb;
+        }
+
+        .about h3 {
+            color: #1f2937;
             margin-bottom: 15px;
+            font-size: 20px;
         }
 
-        .header h1 {
-            margin: 0;
-            font-size: 34px;
-            color: #222;
-        }
-
-        .header p {
-            margin: 10px 0 0;
-            color: #777;
-            font-size: 16px;
+        .about p {
+            color: #6b7280;
+            line-height: 1.7;
+            font-size: 14px;
         }
 
         .info {
-            padding: 30px 40px;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
+            flex: 1;
+            padding: 25px;
+            border-left: 4px solid #374151;
+            background: #f9fafb;
+            border-radius: 0 10px 10px 0;
         }
 
-        .info-item {
-            padding: 15px;
-            background: #f8f8f8;
-            border-radius: 8px;
+        .info h3 {
+            margin-bottom: 18px;
+            color: #1f2937;
         }
 
-        .info-item strong {
-            display: block;
-            color: #888;
-            font-size: 13px;
-            margin-bottom: 6px;
-            text-transform: uppercase;
-        }
-
-        .info-item span {
-            color: #333;
-            font-size: 15px;
-        }
-
-        .footer {
-            text-align: center;
-            color: #999;
+        .info p {
+            margin-bottom: 12px;
             font-size: 14px;
-            margin-top: 25px;
+            line-height: 1.5;
         }
 
-        @media (max-width: 600px) {
+        .info strong {
+            color: #374151;
+        }
+
+        .status {
+            margin-top: 30px;
+            padding: 15px 18px;
+            background: #f3f4f6;
+            border-radius: 8px;
+            font-size: 14px;
+            color: #4b5563;
+        }
+
+        .status span {
+            font-weight: bold;
+            color: #166534;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 35px;
+            color: #9ca3af;
+            font-size: 13px;
+        }
+
+        @media (max-width: 700px) {
+            .navbar {
+                padding: 16px 5%;
+            }
+
             .container {
+                width: 92%;
                 margin: 30px auto;
             }
 
-            .header,
-            .info {
+            .welcome {
                 padding: 25px;
             }
 
-            .info {
-                grid-template-columns: 1fr;
+            .student-section {
+                flex-direction: column;
             }
 
-            .header h1 {
-                font-size: 28px;
+            .info {
+                border-left: none;
+                border-top: 4px solid #374151;
+                border-radius: 0 0 10px 10px;
             }
         }
     </style>
@@ -126,65 +163,92 @@
 
 <body>
 
-    <div class="navbar">
-        <h2>My Laravel Project</h2>
-    </div>
+    <nav class="navbar">
+        <h2>ITST 302</h2>
+        <span>Client-Server Technologies</span>
+    </nav>
 
-    <div class="container">
+    <main class="container">
 
-        <div class="card">
+        <section class="welcome">
 
-            <div class="header">
-                <div class="tag">ITST 302 • Laravel Activity</div>
+            <h1>Welcome to Client-Server Technologies</h1>
 
-                <h1>Hello, Laravel!</h1>
+            <p class="subtitle">
+                Hello! This is my Laravel project for ITST 302.
+                This page was created as part of our Laravel setup and
+                client-server technologies activity.
+            </p>
 
-                <p>
-                    Welcome to my Laravel project and student profile.
-                </p>
+            <div class="student-section">
+
+                <div class="about">
+                    <h3>About This Project</h3>
+
+                    <p>
+                        This project is my introduction to developing a web
+                        application using Laravel and PHP. It demonstrates
+                        the basic setup of a Laravel application, database
+                        configuration, and a customized homepage.
+                    </p>
+
+                    <p style="margin-top: 15px;">
+                        As a third-year BSIT student, this activity helped me
+                        understand how the different tools used in web
+                        development work together.
+                    </p>
+                </div>
+
+                <div class="info">
+
+                    <h3>Student Information</h3>
+
+                    <p>
+                        <strong>Name:</strong><br>
+                        Balmes, Amaru Jay F.
+                    </p>
+
+                    <p>
+                        <strong>Student Number:</strong><br>
+                        0124-0398
+                    </p>
+
+                    <p>
+                        <strong>Course:</strong><br>
+                        Bachelor of Science in Information Technology
+                    </p>
+
+                    <p>
+                        <strong>Section:</strong><br>
+                        3-C
+                    </p>
+
+                    <p>
+                        <strong>Subject:</strong><br>
+                        ITST 302
+                    </p>
+
+                    <p>
+                        <strong>Date:</strong><br>
+                        August 8, 2026
+                    </p>
+
+                </div>
+
             </div>
 
-            <div class="info">
-
-                <div class="info-item">
-                    <strong>Name</strong>
-                    <span>Balmes, Amaru Jay F.</span>
-                </div>
-
-                <div class="info-item">
-                    <strong>Student Number</strong>
-                    <span>0124-0398</span>
-                </div>
-
-                <div class="info-item">
-                    <strong>Course</strong>
-                    <span>Bachelor of Science in Information Technology</span>
-                </div>
-
-                <div class="info-item">
-                    <strong>Section</strong>
-                    <span>3-C</span>
-                </div>
-
-                <div class="info-item">
-                    <strong>Subject</strong>
-                    <span>ITST 302</span>
-                </div>
-
-                <div class="info-item">
-                    <strong>Date</strong>
-                    <span>August 8, 2026</span>
-                </div>
-
+            <div class="status">
+                <strong>Project Status:</strong>
+                <span> Laravel application running successfully</span>
             </div>
 
-        </div>
+        </section>
 
-        <div class="footer">
-            Created with Laravel
-        </div>
+        <footer>
+            <p>ITST 302 &nbsp; | &nbsp; Laravel Project &nbsp; | &nbsp; 3rd Year BSIT</p>
+        </footer>
 
-    </div>
+    </main>
 
 </body>
 </html>
