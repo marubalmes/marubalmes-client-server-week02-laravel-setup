@@ -346,7 +346,6 @@ Date: August 8, 2026
 The page was also given a simple and clean design using HTML and CSS.
 
 Screenshot:
-`![Laravel Homepage](screenshot/laravel-initial-page.png)`
 `![Laravel Homepage](screenshot/hello-laravel-homepage.png)`
 
 **Figure 8. Customized Hello Laravel homepage.**
@@ -710,7 +709,6 @@ client-server-week02-laravel-setup/
 │   ├── mysql-version.png
 │   ├── vscode.png
 │   ├── artisan-serve.png
-│   ├── laravel-initial-page.png
 │   └── hello-laravel-homepage.png
 │
 ├── README.md
