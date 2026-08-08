@@ -670,6 +670,8 @@ docs: added installation screenshots
 feat: updated homepage
 docs: add project README
 style: improve homepage design
+feat: typographical error fixing
+docs: updated screenshots
 ```
 
 The activity required a minimum of five meaningful commits using professional commit messages.
